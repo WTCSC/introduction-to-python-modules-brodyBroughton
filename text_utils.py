@@ -11,4 +11,4 @@ def count_words(text):
 def count_sentences(text):
     
     # Counts how many sentence breakers there are and returns them
-    return text.count('.') and text.count('!') and text.count('?')
+    return (text.count('.') + text.count('!') + text.count('?'))
