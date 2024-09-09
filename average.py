@@ -8,7 +8,7 @@ totalWords = text_utils.count_words(text)
 totalLines = text_utils.count_lines(text)
 
 # Averages and floors the amount of words by the sentences
-avg = math.floor(totalWords / totalLines)
+avg = int(math.floor(totalWords / totalLines))
 
 # Close the file
 text.close()
