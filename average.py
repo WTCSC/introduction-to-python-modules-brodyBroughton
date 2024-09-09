@@ -4,12 +4,12 @@ import text_utils, math
 # Total amount of words in the file using the count_words function
 totalWords = text_utils.count_words('sample.txt')
 
-# Total amount of sentences
-totalSentences = text_utils.count_sentences('sample.txt')
+# Total amount of lines
+totalLines = text_utils.count_lines('sample.txt')
 
 # Averages and floors the amount of words by the sentences
-avg = math.floor(totalWords / totalSentences)
+avg = math.floor(totalWords / totalLines)
 
 # Returns it all :)
-return f'Average words per line: {avg}'
+print(f'Average words per line: {avg}')
 
