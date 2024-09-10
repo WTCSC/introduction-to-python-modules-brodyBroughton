@@ -1,12 +1,24 @@
-"""
-Import the text_utils module you created and calculate the average number of
-words per line in a given text file. The text file that will be used to test
-this is the text file called "sample.txt" (located in the same directory as
-this exercise). The average number of words per line should be rounded down to
-the nearest integer.
+import text_utils, math
+# Imports the text utils and math to use math.floor
 
-Print the average number of words per line in the text file in the following
-format:
+# Opens file
+file = open('sample.txt','r')
 
-"Average words per line: [average]"
-"""
+# File turned into a string
+text = ''.join(file.readlines())
+
+# Total amount of words in the file using the count_words function
+totalWords = text_utils.count_words(text.strip())
+
+# Total amount of lines
+totalLines = text_utils.count_lines(text)
+
+# Averages and floors the amount of words by the sentences
+avg = int(totalWords / totalLines)
+
+# Close the file
+file.close()
+
+# Returns it all :)
+print(f'Average words per line: {avg}')
+
